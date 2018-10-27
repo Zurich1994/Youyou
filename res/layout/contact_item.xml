@@ -1,0 +1,85 @@
+ <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent" >
+
+    <ImageView
+        android:id="@+id/iv_user_pic"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:paddingBottom="2dp"
+        android:src="@drawable/user_pic" />
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@+id/iv_user_pic"
+        android:layout_alignParentRight="true"
+        android:layout_alignTop="@id/iv_user_pic"
+        android:layout_alignBottom="@+id/iv_user_pic"
+        android:layout_marginLeft="15dp"
+        android:orientation="vertical" >
+
+        
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="fill_parent"
+            android:layout_weight="1" >
+            <TextView
+            android:id="@+id/tv_user_nickname"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:text="nackname"
+            android:singleLine="true"
+            android:layout_weight="1" />
+             <TextView
+            android:id="@+id/tv_user_lasttime"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            
+            
+            android:text="lasttime"
+            android:singleLine="true"
+            />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tv_lasttalk"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:layout_weight="1"
+            android:singleLine="true"
+            android:text="hellow" />
+        
+    </LinearLayout>
+
+</RelativeLayout>
+<!-- 
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" 
+        android:layout_width="fill_parent"
+         android:layout_height="wrap_content">
+         <ImageView
+        android:id="@+id/iv_user_pic"
+     	android:layout_width="50dp" 
+        android:layout_height="50dp"
+        
+        android:src="@drawable/user_pic" />
+        <TextView
+            android:id="@+id/tv_user_nickname"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:text="nackname"
+            android:singleLine="true"
+            android:layout_weight="1" />
+         <TextView
+            android:id="@+id/tv_lasttalk"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:layout_weight="1"
+            android:singleLine="true"
+            android:text="hellow" />
+        
+        
+    </LinearLayout> -->

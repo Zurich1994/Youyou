@@ -1,0 +1,124 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" >
+<include layout="@layout/header"/>
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="80dp">
+
+        <ImageView
+            android:id="@+id/iv_avatar"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="10dp"
+            android:src="@drawable/nopic" />
+
+        <TextView
+            android:id="@+id/textView1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="20dp"
+            android:textSize="20sp"
+            android:text="头像" />
+
+    </RelativeLayout>
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="fill_parent"
+        android:layout_height="2dp"
+        android:layout_marginTop="2dp"
+        android:src="@drawable/hx" />
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="40dp"
+        android:layout_marginTop="10dp">
+
+       
+
+        <TextView
+            android:id="@+id/nc"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="20dp"
+            android:textSize="20sp"
+            android:text="昵       称" />
+
+           <EditText
+            
+            android:id="@+id/et_nickname"
+            android:layout_toRightOf="@+id/nc"
+            
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:layout_marginRight="10dp"
+            android:textSize="16sp"
+            android:textColor="#9c9c9c"
+            android:text="w b,"
+            
+            
+            android:layout_alignParentRight="true"
+            android:singleLine="true" 
+            >
+
+            <requestFocus />
+        </EditText>
+       
+
+    </RelativeLayout>
+
+   
+	 <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="40dp"
+        android:layout_marginTop="10dp">
+
+       
+
+        <TextView
+            android:id="@+id/tv_desc"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="20dp"
+            android:textSize="20sp"
+            android:text="个性签名" />
+
+         <EditText
+            
+            android:id="@+id/et_decs"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:textSize="16sp"
+            android:textColor="#9c9c9c"
+            android:text=""
+            android:layout_toRightOf="@+id/tv_desc"
+            android:singleLine="true" 
+            />
+
+    </RelativeLayout>
+
+	 <Button
+            android:id="@+id/but_save"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:background="#EDEDED"
+            android:text="保存"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:textColor="#545454" 
+            android:textStyle="bold"/>
+
+
+</LinearLayout>

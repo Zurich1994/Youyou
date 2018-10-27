@@ -1,0 +1,75 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" >
+ 
+    <RelativeLayout
+        android:id="@+id/layout_vcard"
+        android:layout_width="fill_parent"
+        android:layout_height="80dp"
+        android:layout_marginTop="20dp"
+         >
+
+        <ImageView
+            android:id="@+id/iv_avatar"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:src="@drawable/nopic" />
+
+        <TextView
+            android:id="@+id/tv_nickname"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="10dp"
+            android:layout_toRightOf="@+id/iv_avatar"
+            android:textStyle="bold"
+            android:textSize="14sp"
+            android:text="W b" />
+
+        <TextView
+            android:id="@+id/tv_id"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_toRightOf="@+id/iv_avatar"
+            android:layout_below="@+id/tv_nickname"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="10dp"
+            android:textColor="#9c9c9c"
+            android:text="帐号：wb79497777" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/layout_set"
+        android:layout_width="fill_parent"
+        android:layout_height="30dp"
+        android:layout_marginTop="20dp"
+         >
+
+        <ImageView
+            android:id="@+id/imageView1"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginLeft="10dp"
+            android:src="@drawable/set" />
+
+        <TextView
+            android:id="@+id/tv_set"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@+id/imageView1"
+            android:layout_marginLeft="10dp"
+            android:textStyle="bold"
+            android:textSize="14sp"
+            android:text="设置" />
+        
+    </RelativeLayout>
+
+</LinearLayout>

@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="#000"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="30dip"
+        android:gravity="center_vertical" >
+
+        <ImageButton
+            android:id="@+id/title_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/title_btn_l_selector"
+            android:padding="0.0dip"
+            android:src="@drawable/title_btn_back" />
+
+        <TextView
+            android:id="@+id/to_chat_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1.0"
+            android:ellipsize="end"
+            android:singleLine="true"
+            android:text="张三"
+            android:textColor="#fff"
+            android:textSize="18.0sp"
+            android:textStyle="bold" />
+
+        <ImageButton
+            android:id="@+id/user_info"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/title_btn_r_selector"
+            android:padding="0.0dip"
+            android:src="@drawable/popbar_icon_info" />
+    </LinearLayout>
+
+    <ListView
+        android:id="@+id/chat_list"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1.0"
+        android:background="#fff"
+        android:divider="@null"
+        android:listSelector="@android:color/transparent" >
+    </ListView>
+    <!-- 底部按钮以及 编辑框 -->
+
+    <RelativeLayout
+        android:id="@+id/rl_bottom"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/chat_footer_bg" >
+
+        <ImageButton
+            android:id="@+id/imgBut_addpic"
+            android:layout_width="wrap_content"
+            android:layout_height="45dip"
+            android:layout_alignParentLeft="true"
+            android:src="@drawable/chat_bottom_up_press" />
+	 <ImageView
+            android:id="@+id/ivPopUp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/imgBut_addpic"
+            android:layout_centerVertical="true"
+            android:src="@drawable/chatting_setmode_msg_btn" />
+        <RelativeLayout
+            android:id="@+id/btn_bottom"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@+id/ivPopUp" >
+
+            <Button
+                android:id="@+id/chat_sendbtn"
+                android:layout_width="60dp"
+                android:layout_height="40dp"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="10dp"
+                android:background="@drawable/chat_send_btn"
+                android:text="发送" />
+
+            <EditText
+                android:id="@+id/chat_content"
+                android:layout_width="fill_parent"
+                android:layout_height="40dp"
+                android:layout_alignParentTop="true"
+                android:layout_toLeftOf="@+id/chat_sendbtn"
+                android:background="@drawable/login_edit_normal"
+                android:ems="10"
+                android:singleLine="true"
+                android:textSize="18sp" >
+
+                <requestFocus />
+            </EditText>
+
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/btn_rcd"
+            android:layout_width="fill_parent"
+            android:layout_height="40dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_toRightOf="@+id/ivPopUp"
+            android:background="@drawable/chat_send_btn"
+            android:gravity="center"
+            android:text="按住说话"
+            android:visibility="gone" />
+
+         <LinearLayout
+        android:id="@+id/rcChat_popup"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:gravity="center"
+        android:visibility="gone" >
+
+        <include
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            layout="@layout/voice_rcd_hint_window" />
+    </LinearLayout>
+
+    </RelativeLayout>
+
+
+</LinearLayout>

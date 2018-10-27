@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.youyo"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <uses-sdk
+        android:minSdkVersion="8"
+        android:targetSdkVersion="18" />
+	<!-- 访问Internet -->
+	<uses-permission android:name="android.permission.INTERNET" />
+	<!--- 访问网络状态 -->
+ 	<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+ 	<!-- 往SDCard写入数据权限 -->
+ 	<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+ 	<!-- 在SDCard中创建与删除文件权限 -->
+    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS"/>
+    <!-- 往SDCard写入数据权限 -->
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+     <uses-permission android:name="android.permission.RECORD_AUDIO" />
+     
+     
+     <uses-permission android:name="android.permission.BAIDU_LOCATION_SERVICE" >
+    </uses-permission>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" >
+    </uses-permission>
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" >
+    </uses-permission>
+    <uses-permission android:name="android.permission.INTERNET" >
+    </uses-permission>
+    <uses-permission android:name="android.permission.ACCESS_MOCK_LOCATION" >
+    </uses-permission>
+    <!-- <uses-permission android:name="android.permission.WRITE_APN_SETTINGS"></uses-permission> -->
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" >
+    </uses-permission>
+    <uses-permission android:name="com.android.launcher.permission.READ_SETTINGS" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" >
+    </uses-permission>
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_GPS" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.READ_CONTACTS" />
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+    <uses-permission android:name="android.permission.READ_SMS" />
+    <uses-permission android:name="android.permission.SEND_SMS" />
+    <!-- SDK1.5需要android.permission.GET_TASKS权限判断本程序是否为当前运行的应用? -->
+    <uses-permission android:name="android.permission.GET_TASKS" />
+    <uses-permission android:name="android.permission.CAMERA" >
+    </uses-permission>
+    <uses-permission android:name="android.permission.RECORD_AUDIO" >
+    </uses-permission>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" >
+    </uses-permission>
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <uses-permission android:name="android.permission.BROADCAST_STICKY" />
+    <uses-permission android:name="android.permission.WRITE_SETTINGS" />
+    <!-- 来电消音 -->
+    <uses-permission android:name="android.permission.PROCESS_OUTGOING_CALLS" >
+    </uses-permission>
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS" />
+    <application
+        android:allowBackup="true"
+        android:name="com.example.youyou.activity.YouyouApplication"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme" >
+         <meta-data
+            android:name="com.baidu.lbsapi.API_KEY"
+            android:value="7M5e47gzLW6dvpwM1Qzn2SRC" />
+        <uses-library android:name="android.test.runner" />
+        <activity android:name="com.example.youyou.activity.LoginActivity"  
+                  android:label="@string/app_name">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+            
+        </activity> 
+        <activity android:name="com.example.youyou.activity.MainActivity"></activity>
+      
+        <activity android:name="com.example.youyou.activity.MainActivity2"></activity>
+       <activity android:name="com.example.youyou.activity.ChatActivity" android:launchMode="standard" android:screenOrientation="portrait"></activity>
+        <activity android:name="com.example.youyou.activity.StartActivity"></activity>
+        <activity android:name="com.example.youyou.activity.FindActivity"></activity>
+        <activity android:name="com.example.youyou.activity.AddressActivity"></activity>
+        <activity android:name="com.example.youyou.activity.SetActivity"></activity>
+        <activity android:name="com.example.youyou.activity.AddContacterActivity"></activity>
+        <activity android:name="com.example.youyou.activity.SetUserInfoActivity"></activity>
+        <activity android:name="com.example.youyou.activity.StartFragmentActivity"></activity>
+        <activity android:name="com.example.youyou.activity.GuideViewActivity"></activity>
+        <activity android:name="com.example.youyou.activity.ShowPicActivity"></activity>
+        <activity android:name="com.example.youyou.activity.NearlyActivity"></activity>
+        <activity android:name="com.example.youyou.activity.AddfrindsActivity"></activity>
+         <activity android:name="com.example.youyou.activity.ResginActivity"></activity>
+        <service android:name="com.example.youyou.service.ContactService" ></service>
+        <service android:name="com.example.youyou.service.IMChatService" ></service>
+        <service android:name="com.example.youyou.service.LoadContactService" ></service>
+        <service android:name="com.example.youyou.service.MyLocationService" ></service>
+         <service
+        android:name="com.baidu.location.f"
+        android:enabled="true"
+        android:process=":remote" >
+    </service>
+    </application>
+
+</manifest>

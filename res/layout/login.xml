@@ -1,0 +1,127 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent" 
+    android:background="@drawable/bg"
+    
+    >
+	<include layout="@layout/header"/>
+    <ImageView
+        android:id="@+id/iv_avatar"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="100dp"
+        android:src="@drawable/user_pic" />
+
+    <LinearLayout
+        android:id="@+id/linearLayout1"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/iv_avatar"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+        android:orientation="vertical" >
+
+        <EditText
+            
+            android:id="@+id/et_login_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:hint="请输入帐号"
+            android:singleLine="true" >
+
+            <requestFocus />
+        </EditText>
+
+        <EditText
+            android:id="@+id/et_login_password"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="请输入密码"
+             android:inputType="textPassword"
+            android:layout_marginTop="5dp"
+            android:singleLine="true" >
+
+            <requestFocus />
+        </EditText>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" >
+
+            <CheckBox
+                android:id="@+id/cb_remember"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:textColor="#ababab"
+                android:singleLine="true"
+                android:text="记住密码" />
+
+            <CheckBox
+                android:id="@+id/cb_autologin"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:textColor="#ababab"
+                android:text="自动登录" />
+
+            <CheckBox
+                android:id="@+id/cb_novisible"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+            	android:layout_weight="1"
+            	android:textColor="#ababab"
+                android:text="隐身登录" />
+            
+
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/but_login"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:background="#EDEDED"
+            android:text="登录"
+            android:layout_marginTop="5dp"
+            android:textColor="#545454" 
+            android:textStyle="bold"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginRight="15dp"
+        android:layout_marginLeft="15dp"
+        android:layout_alignParentRight="true" 
+        android:layout_alignParentLeft="true" 
+        android:layout_marginBottom="10dp"
+         >
+
+        <TextView
+            android:id="@+id/tv_logconfig"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="登录设置"
+            android:textColor="#436EEE"
+            android:layout_weight="1" />
+
+        <TextView
+            android:id="@+id/tv_reg"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#436EEE"
+            
+            android:text="新用户" />
+        
+    </LinearLayout>
+
+
+
+</RelativeLayout>
